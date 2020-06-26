@@ -51,12 +51,14 @@ export class ProdutosComponent implements OnInit {
 
   }
   public deletar(produto: Produto) {
-    this.produtosService.setDeletarProduto(produto).subscribe(() => {
-      this.produtosService.getListaProdutoWS().subscribe(res => {
-        this.produtos = res;
-        alert('Produto excluido com sucesso!')
+    if (window.confirm('Tem certeza que deseja remover?')) {
+      this.produtosService.setDeletarProduto(produto).subscribe(() => {
+        this.produtosService.getListaProdutoWS().subscribe(res => {
+          this.produtos = res;
+          alert('Produto excluido com sucesso!')
+        });
       });
-    });
+    }
   }
 
   //defindo uma lista de produtos com instancias da classe

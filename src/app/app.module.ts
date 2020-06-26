@@ -13,6 +13,11 @@ import { ProdutosComponent } from './produtos/produtos/produtos.component';
 import { NotFoundComponent } from './erros/not-found/not-found.component';
 import { ProdutoService } from './services/produto.service';
 import { SubListaPipe } from './filtros/sub-lista.pipe';
+import { FornecedorHomeComponent } from './fornecedores/fornecedor-home/fornecedor-home.component';
+import { FornecedorListaComponent } from './fornecedores/fornecedor-lista/fornecedor-lista.component';
+import { FornecedoresNovoComponent } from './fornecedores/fornecedores-novo/fornecedores-novo.component';
+import { FornecedoresAlteracaoComponent } from './fornecedores/fornecedores-alteracao/fornecedores-alteracao.component';
+import { FornecedoresRemocaoComponent } from './fornecedores/fornecedores-remocao/fornecedores-remocao.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { SubListaPipe } from './filtros/sub-lista.pipe';
     HomeComponent,
     ProdutosComponent,
     NotFoundComponent,
-    SubListaPipe
+    SubListaPipe,
+    FornecedorHomeComponent,
+    FornecedorListaComponent,
+    FornecedoresNovoComponent,
+    FornecedoresAlteracaoComponent,
+    FornecedoresRemocaoComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes), FormsModule, HttpClientModule

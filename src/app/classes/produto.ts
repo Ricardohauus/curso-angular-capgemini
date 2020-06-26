@@ -52,14 +52,7 @@ export class Produto {
     this._categoria = v;
   }
 
-  private id?: string;
-
-  public get _id(): string {
-    return this.id;
-  }
-  public set _id(v: string) {
-    this.id = v;
-  }
+  public _id?: string;
 
   //método para receber os dados dos produtos
   // public setDados(cod, descr, unid, preco, cat): void {
